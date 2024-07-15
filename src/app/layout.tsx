@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import {FTPClient} from "@/app/FTPClient";
+import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+    <FTPClient />
       <body className={inter.className}>{children}</body>
     </html>
   );
